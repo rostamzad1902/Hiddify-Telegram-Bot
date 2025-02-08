@@ -128,7 +128,7 @@ def panel_url_validator(url):
         url = url.replace("/admin/user", "")
     print(colored("Checking URL...", "yellow"))
     try:
-        request = requests.get(f"{url}/admin/")
+        request = requests.get(f"{url}/")
     except requests.exceptions.ConnectionError as e:
         print(colored("URL is not valid! Error in connection", "red"))
         print(colored(f"Error: {e}", "red"))
